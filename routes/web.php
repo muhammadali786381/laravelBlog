@@ -13,13 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/about', function () {
-    return view('about.developer');
-});
+Route::get('/','PagesController@index');
+Route::get('/about','PagesController@about');
+
+// Route::get('/about', function () {
+//     return view('about.developer');
+// });
 
 Route::get('/user/{id}', function ($id) {
     return $id;

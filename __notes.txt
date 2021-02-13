@@ -1,0 +1,37 @@
+install command
+
+//start server
+php artisan serve
+php artisan serve --port=????
+
+//close server
+ctrl+c
+
+
+//create controller
+php artisan make:controller [name of controller]
+
+
+
+//create layout
+--in layout page
+	@yield('[name here]') //use same name in calling section
+        
+       //calling layout page
+        @extends('layout.head')
+
+	//create content div
+	@section('[name here]') //name that is used in layout yield().
+	
+	
+	@endsection
+
+//passing value into view
+--two menthod
+1.compact();// user inside view
+2.return view("pages.index")->with(["key":"val"]);
+--user in view
+{{$key}}	
+
+
+
